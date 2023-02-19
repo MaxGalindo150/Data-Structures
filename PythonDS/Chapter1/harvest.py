@@ -14,12 +14,23 @@ def run():
 
     count = 0
     for i in TonsM:
-        count = count + TonsM[i]
+        count = count + i
 
-    mean = count/12       
+    mean = count/12   
+    a = 0
+    l = 0 
+    
+    for i in TonsM:
+        if mean<i:
+            a = a+1
+        
+        if mean>i:
+            l = l+1
 
+    print(TonsM)
     print("a): ", mean)
-
+    print("b): ", a)
+    print("c): ", l)
 
 
 if __name__== "__main__":
