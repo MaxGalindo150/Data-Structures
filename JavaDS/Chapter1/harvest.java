@@ -25,35 +25,37 @@ public class harvest
 
             tons[i] = ton;  //assinging each value
         }
-        
         int sum = 0;
 
-        for (int j=0; j<n; j++)
+        for (int j=0; j<n; j++) //Add each element 
         {
             sum = sum + tons[j];
         }
 
-        avr = sum/n;
+        avr = sum/n; //Calculate the average
 
         g = 0;
         l = 0;
 
-        for (int m=0; m<n; m++)
+        for (int m=0; m<n; m++) 
         {
-            if (tons[m]>avr)
+            if (tons[m]>avr)//count how many months have more tons than the average
             {
                 g = g+1;
             }
             
-            if(tons[m]<avr)
+            if(tons[m]<avr)//count how many months have less tons than the average
             {
                 l = l+1;
             }
 
         }
         
+
+        //Print results
+
         System.out.println("TONS PER MONTH (JAN-DIC):");
-        System.out.println(Arrays.toString(tons) +"\n"); //print array
+        System.out.println(Arrays.toString(tons) +"\n"); 
 
         System.out.println("AVERAGE: "+avr+"\n");
 
